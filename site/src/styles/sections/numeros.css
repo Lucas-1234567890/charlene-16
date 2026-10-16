@@ -1,0 +1,41 @@
+/* 05 · EM NÚMEROS (.drop-index / .index-table do VOID/03) */
+.numeros {
+  background: var(--ink); color: var(--paper);
+  padding: 16vh 3vw 14vh;
+  border-bottom: 1px solid var(--ink);
+}
+.index-head {
+  display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 20px 40px;
+  margin-bottom: 60px;
+}
+.index-head .eyebrow:first-child { grid-column: 1 / -1; }
+.numeros .display { font-size: clamp(64px, 10vw, 170px); }
+.numeros .display .outline { -webkit-text-stroke-color: var(--paper); }
+.index-note { max-width: 260px; color: #bdb8ad; text-align: right; }
+.index-table { border-top: 1px solid rgba(255, 255, 255, .4); }
+.index-row {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, .9fr);
+  align-items: center; gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+  transition: padding .3s, background .3s, color .3s;
+  cursor: default;
+}
+.index-row:hover, .index-row:focus-visible { padding-left: 18px; background: var(--red); color: var(--on-red); outline: none; }
+.index-row b { font-size: clamp(34px, 5vw, 75px); font-weight: 800; letter-spacing: -.06em; line-height: 1; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.index-row span { font: 400 10px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .04em; }
+.ir-m { font-size: 12px !important; }
+.ir-d { opacity: 0; transform: translateX(-10px); transition: opacity .35s, transform .35s var(--ease); }
+.index-row:hover .ir-d, .index-row:focus-visible .ir-d { opacity: 1; transform: none; }
+
+@media (max-width: 850px) {
+  .numeros { padding: 72px 16px 64px; }
+  .index-head { grid-template-columns: minmax(0, 1fr); margin-bottom: 36px; }
+  .index-note { text-align: left; }
+  .numeros .display { font-size: clamp(56px, 18.5vw, 120px); }
+  .index-row { grid-template-columns: 34px minmax(0, 1fr); gap: 6px 12px; padding: 20px 0; }
+  .ir-v { grid-column: 2; }
+  .ir-d { grid-column: 2; opacity: .75; transform: none; }
+  .index-row:hover { padding-left: 0; }
+}

@@ -1,0 +1,64 @@
+/* 08 · FINALE: FAROL DA BARRA */
+.finale {
+  --glow: 0;
+  position: relative;
+  min-height: 100vh; min-height: 100svh;
+  overflow: hidden;
+  color: var(--paper);
+  background: linear-gradient(180deg, var(--blue) 0%, #6a2f8f 34%, var(--red) 62%, #ff9b5e 70%, var(--red) 76%);
+  border-bottom: 1px solid var(--ink);
+}
+.farol-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.farol-fallback { position: absolute; right: 8%; bottom: 0; width: min(36vw, 260px); }
+.farol-flash {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at 70% 40%, rgba(255, 244, 210, .9), rgba(255, 244, 210, 0) 60%);
+  opacity: calc(var(--glow) * .45);
+}
+.finale-copy {
+  position: relative; z-index: 2;
+  min-height: 100vh; min-height: 100svh;
+  padding: calc(var(--top) + 8vh) 3vw 7vh;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start;
+  max-width: 58%;
+}
+.finale-copy > .eyebrow { margin-bottom: auto; background: var(--paper); color: var(--ink); padding: 7px 9px; border: 1px solid var(--ink); }
+.final-number {
+  font-size: clamp(110px, 19vw, 330px);
+  font-weight: 900; line-height: .74; letter-spacing: -.09em;
+  color: var(--paper);
+  margin-left: -.04em;
+  text-shadow: 0 0 calc(var(--glow) * 70px) rgba(255, 240, 200, calc(var(--glow) * .9));
+  filter: brightness(calc(1 + var(--glow) * .25));
+  will-change: filter;
+}
+.finale-frase {
+  margin-top: 28px; max-width: 18ch;
+  font-size: clamp(30px, 3.6vw, 56px); font-weight: 800; line-height: 1; letter-spacing: -.035em;
+  text-shadow: 0 2px 24px rgba(16, 16, 16, .35);
+}
+.finale-parabens { text-shadow: 0 1px 10px rgba(16, 16, 16, .6); margin-top: 18px; font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+.finale-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.finale-actions .btn { min-width: 220px; background: rgba(16, 16, 16, .25); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+
+.footer {
+  background: var(--ink); color: var(--paper);
+  padding: 60px 3vw calc(30px + env(safe-area-inset-bottom));
+  display: grid; gap: 30px;
+}
+.footer-brand { font-size: clamp(56px, 13vw, 230px); font-weight: 900; letter-spacing: -.09em; line-height: .78; padding-top: .08em; overflow-wrap: anywhere; }
+.footer-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 30px; color: #bdb8ad; border-top: 1px solid rgba(243, 239, 229, .25); padding-top: 16px; }
+.footer-top { color: var(--acid); }
+
+@media (max-width: 850px) {
+  .finale, .finale-copy { min-height: 118svh; }
+  .finale-copy { max-width: none; padding: calc(var(--top) + 28px) 16px 40px; justify-content: flex-start; }
+  .finale-copy > .eyebrow { margin-bottom: 24px; }
+  .final-number { font-size: 33vw; }
+  .finale-frase { font-size: clamp(28px, 8.4vw, 40px); margin-top: 18px; }
+  .finale-actions { margin-top: auto; padding-top: 30px; width: 100%; }
+  .finale-actions .btn { width: 100%; }
+  .farol-flash { background: radial-gradient(circle at 50% 45%, rgba(255, 244, 210, .9), rgba(255, 244, 210, 0) 60%); }
+  .footer { padding: 48px 16px calc(28px + env(safe-area-inset-bottom)); }
+  .footer-meta { flex-direction: column; }
+}

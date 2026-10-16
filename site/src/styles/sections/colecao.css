@@ -1,0 +1,83 @@
+/* 06 · A COLEÇÃO (.conveyor do VOID/03) */
+.conveyor {
+  height: calc(var(--n) * 100vh);
+  height: calc(var(--n) * 100svh);
+  background: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.conveyor-sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.conveyor-ui {
+  position: absolute; z-index: 20; left: 18px; right: 18px; top: calc(var(--top) + 18px);
+  display: flex; justify-content: space-between; pointer-events: none;
+}
+.conveyor-ui .eyebrow { background: var(--paper); border: 1px solid var(--ink); padding: 7px 9px; }
+.conveyor-count b { font-weight: 500; color: var(--red); }
+.track { position: absolute; inset: 0; display: flex; will-change: transform; }
+.slide {
+  width: calc(100vw - var(--rail));
+  height: 100%;
+  flex: none;
+  position: relative;
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  background: var(--paper);
+  border-right: 1px solid var(--ink);
+  overflow: hidden;
+}
+.slide-1 { background: var(--muted); }
+.slide-2 { background: var(--red); color: var(--on-red); }
+.slide-3 { background: var(--ink); color: var(--paper); }
+.slide-index {
+  border-right: 1px solid currentColor;
+  display: grid; place-items: center;
+  font: 800 34px/1 var(--sans); letter-spacing: -.06em;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+}
+.slide-stage {
+  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; gap: 4vw;
+  padding: calc(var(--top) + 60px) 5vw 70px;
+}
+.slide-title {
+  font-size: clamp(64px, 10vw, 180px); font-weight: 900; line-height: .8; letter-spacing: -.085em;
+  margin: 26px 0 30px; padding-top: .08em;
+  overflow-wrap: anywhere;
+}
+.slide-copy p { max-width: 440px; font-size: clamp(17px, 1.5vw, 22px); line-height: 1.35; }
+.slide-art { position: relative; display: grid; place-items: center; }
+.slide-art svg { width: min(100%, 420px); height: auto; }
+.slide-art .s { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; }
+.slide-art .w { stroke-width: 5; }
+.slide-art .f-red { fill: var(--red); stroke: currentColor; stroke-width: 3; }
+.slide-2 .slide-art .f-red { fill: var(--paper); }
+.slide-art .f-paper { fill: var(--paper); stroke: currentColor; stroke-width: 3; }
+.slide-art .stamp { right: 0; top: 0; }
+/* foto em duotone (tinta + vermelho) */
+.slide-art.has-photo { align-self: end; margin-bottom: -70px; isolation: isolate; }
+.slide-art.has-photo::before { content: ''; position: absolute; inset: 6% 6% 0; background: var(--red); z-index: -1; }
+.slide-art.has-photo img { width: min(100%, 460px); mix-blend-mode: multiply; filter: grayscale(1) contrast(1.2) brightness(1.08); }
+
+.conveyor-meter {
+  position: absolute; z-index: 20; left: 18px; right: 18px; bottom: 18px;
+  height: 3px; background: rgba(16, 16, 16, .2);
+}
+.conveyor-meter i { display: block; height: 100%; background: var(--red); transform-origin: left; transform: scaleX(.2); }
+
+/* reduced motion: vira lista vertical */
+.conveyor.is-static { height: auto; }
+.conveyor.is-static .conveyor-sticky { position: relative; height: auto; }
+.conveyor.is-static .track { position: relative; flex-direction: column; }
+.conveyor.is-static .slide { width: 100%; min-height: 100svh; border-right: 0; border-bottom: 1px solid var(--ink); }
+.conveyor.is-static .conveyor-meter { display: none; }
+
+@media (max-width: 850px) {
+  .slide { grid-template-columns: minmax(0, 1fr); }
+  .slide-index { display: none; }
+  .slide-stage { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 10px; padding: calc(var(--top) + 64px) 16px 48px; align-items: start; }
+  .slide-title { font-size: clamp(54px, 17vw, 96px); margin: 16px 0 18px; }
+  .slide-copy p { font-size: 17px; }
+  .slide-art { align-self: stretch; min-height: 0; }
+  .slide-art svg { width: min(68vw, 260px); }
+  .slide-art .stamp { display: none; }
+  .slide-art.has-photo { margin-bottom: -48px; }
+  .slide-art.has-photo img { width: min(78vw, 330px); }
+}

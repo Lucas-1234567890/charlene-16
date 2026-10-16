@@ -1,0 +1,46 @@
+/* 04 · FITINHAS DO BONFIM */
+.fitas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper);
+}
+.fitas-head {
+  padding: 14vh 3vw 8vh;
+  border-right: 1px solid var(--ink);
+}
+.fitas .display { margin: 34px 0 30px; font-size: clamp(54px, 6.4vw, 108px); line-height: .9; }
+.fitas-head > p { max-width: 420px; }
+.nos { list-style: none; margin: 40px 0 0; padding: 0; border-top: 1px solid var(--ink); }
+.no {
+  --c: var(--muted);
+  display: grid; grid-template-columns: 70px 1fr; gap: 14px; align-items: start;
+  padding: 16px 0; border-bottom: 1px solid var(--ink);
+  transition: padding .4s var(--ease), background .4s;
+}
+.no p { color: #6b675e; font-size: 15px; line-height: 1.4; }
+.no.is-tied { padding-left: 12px; background: linear-gradient(90deg, var(--c) 0 6px, transparent 6px); }
+.no.is-tied p { color: var(--ink); font-weight: 600; animation: notePop .7s var(--ease); }
+.no .eyebrow { padding-top: 3px; }
+.nos-final { margin-top: 18px; min-height: 3em; color: var(--ink); }
+.nos-final:not(:empty) { padding: 10px 12px; background: var(--acid); animation: notePop .7s var(--ease); }
+
+.fitas-stage { position: relative; min-height: 600px; background: var(--paper); }
+.fitas-canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; cursor: pointer; }
+.fitas-a11y { position: absolute; left: 24px; bottom: 24px; background: var(--paper); }
+.fitas-stamp { right: 18px; bottom: 24px; }
+
+@media (max-width: 850px) {
+  .fitas { grid-template-columns: minmax(0, 1fr); }
+  .fitas-head { padding: 64px 16px 36px; border-right: 0; }
+  .fitas .display { font-size: clamp(50px, 15.5vw, 86px); margin: 22px 0 20px; }
+  .fitas-stage { min-height: 480px; border-top: 1px solid var(--ink); order: 2; }
+  .fitas-head { display: contents; }
+  .fitas-head > .eyebrow { padding: 64px 16px 0; }
+  .fitas-head > .display, .fitas-head > p { padding: 0 16px; }
+  .nos, .nos-final { order: 3; margin: 0 16px; }
+  .nos { margin-top: 28px; }
+  .nos-final { margin-bottom: 40px; }
+  .fitas-a11y { left: 16px; bottom: 16px; }
+  .fitas-stamp { right: 12px; bottom: 16px; }
+}
