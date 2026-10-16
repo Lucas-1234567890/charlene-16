@@ -19,7 +19,7 @@ export const content = {
   remetente: 'Lucas Amorim · Inteligência Comercial',
 
   // Time de Inteligência Comercial (usado nos números e no mural de recados)
-  time: ['Lucas Amorim', 'Joelton', 'Adriana', 'Camile', 'Mariane', 'Jamile', 'Adriana', 'Ana Cláudia', 'Crislane'],
+  time: ['Lucas Amorim', 'Joelton', 'Adriana', 'Camile', 'Mariane', 'Jamile', 'Luan', 'Ana Cláudia', 'Crislane'],
 
   // Número para o botão "mandar um abraço de volta" (só dígitos, com DDI e DDD, ex. '5571999999999').
   // Deixe vazio ('') para esconder o botão.
@@ -120,7 +120,7 @@ export const content = {
       { metrica: 'Reuniões que viraram contrato', valor: 'Incontáveis', detalhe: 'A gente tentou contar. O Excel travou.' },
       { metrica: 'Cafés tomados com cliente', valor: '∞', detalhe: 'Fonte: todas as cafeterias de Salvador.' },
       { metrica: 'Vezes que disse "vamos bater essa meta"', valor: 999, prefixo: '+', detalhe: 'E na maioria das vezes bateu.' },
-      { metrica: 'Pessoas que ela fez crescer (só na Inteligência Comercial)', valor: 9, detalhe: 'Lucas, Joelton, Adriana, Camile, Mariane, Jamile, Adriana, Ana Cláudia e Crislane.' },
+      { metrica: 'Pessoas que ela fez crescer (só na Inteligência Comercial)', valor: 9, detalhe: 'Lucas, Joelton, Adriana, Camile, Mariane, Jamile, Luan, Ana Cláudia e Crislane.' },
     ],
   },
 
@@ -151,7 +151,7 @@ export const content = {
       { nome: 'Camile', cargo: 'Inteligência Comercial', texto: '' },
       { nome: 'Mariane', cargo: 'Inteligência Comercial', texto: '' },
       { nome: 'Jamile', cargo: 'Inteligência Comercial', texto: '' },
-      { nome: 'Adriana', cargo: 'Inteligência Comercial', texto: '' },
+      { nome: 'Luan', cargo: 'Inteligência Comercial', texto: '' },
       { nome: 'Ana Cláudia', cargo: 'Inteligência Comercial', texto: '' },
       { nome: 'Crislane', cargo: 'Inteligência Comercial', texto: '' },
     ],
