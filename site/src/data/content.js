@@ -19,7 +19,7 @@ export const content = {
   remetente: 'Lucas Amorim · Inteligência Comercial',
 
   // Time de Inteligência Comercial (usado nos números e no mural de recados)
-  time: ['Lucas Amorim', 'Joelton', 'Adriana', 'Camile', 'Mariane', 'Jamile', 'Luan', 'Ana Cláudia', 'Crislane'],
+  time: ['Lucas Amorim', 'Joelton', 'Adriana', 'Camile', 'Mariane', 'Jamile', 'Luan', 'Ana Cláudia', 'Crislane', 'Maira', 'Nilma'],
 
   // Número para o botão "mandar um abraço de volta" (só dígitos, com DDI e DDD, ex. '5571999999999').
   // Deixe vazio ('') para esconder o botão.
@@ -120,7 +120,7 @@ export const content = {
       { metrica: 'Reuniões que viraram contrato', valor: 'Incontáveis', detalhe: 'A gente tentou contar. O Excel travou.' },
       { metrica: 'Cafés tomados com cliente', valor: '∞', detalhe: 'Fonte: todas as cafeterias de Salvador.' },
       { metrica: 'Vezes que disse "vamos bater essa meta"', valor: 999, prefixo: '+', detalhe: 'E na maioria das vezes bateu.' },
-      { metrica: 'Pessoas que ela fez crescer (só na Inteligência Comercial)', valor: 9, detalhe: 'Lucas, Joelton, Adriana, Camile, Mariane, Jamile, Luan, Ana Cláudia e Crislane.' },
+      { metrica: 'Pessoas que ela fez crescer (só na Inteligência Comercial)', valor: 11, detalhe: 'Lucas, Joelton, Adriana, Camile, Mariane, Jamile, Luan, Ana Cláudia, Crislane, Maira e Nilma.' },
     ],
   },
 
@@ -142,7 +142,7 @@ export const content = {
     eyebrow: '07 · Quem assina',
     titulo: ['O', 'TIME'],
     texto: 'A equipe de Inteligência Comercial que preparou este presente. E tem um recado lá no fim, de alguém muito especial.',
-    carimbo: '9 assinaturas · 1 recado do futuro',
+    carimbo: '11 assinaturas · 1 recado do futuro',
     // Um objeto por pessoa: { nome, cargo, texto }. Com texto vazio, a linha mostra só o nome.
     lista: [
       { nome: 'Lucas Amorim', cargo: 'Inteligência Comercial', texto: '' },
@@ -154,6 +154,8 @@ export const content = {
       { nome: 'Luan', cargo: 'Inteligência Comercial', texto: '' },
       { nome: 'Ana Cláudia', cargo: 'Inteligência Comercial', texto: '' },
       { nome: 'Crislane', cargo: 'Inteligência Comercial', texto: '' },
+      { nome: 'Maira', cargo: 'Inteligência Comercial', texto: '' },
+      { nome: 'Nilma', cargo: 'Inteligência Comercial', texto: '' },
     ],
     futuro: {
       nome: 'Charlene',

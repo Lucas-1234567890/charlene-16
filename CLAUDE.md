@@ -188,7 +188,7 @@ Tabela estilo "drop index", com contadores animando ao entrar na tela:
 | 02 | Reuniões que viraram contrato | `[PREENCHER ou "incontáveis"]` |
 | 03 | Cafés tomados com cliente | `∞` |
 | 04 | Vezes que disse "vamos bater essa meta" | `+999` |
-| 05 | Pessoas que ela fez crescer (só Inteligência Comercial) | **9**: Lucas, Joelton, Adriana, Camile, Mariane, Jamile, Luan, Ana Cláudia, Crislane |
+| 05 | Pessoas que ela fez crescer (só Inteligência Comercial) | **11**: Lucas, Joelton, Adriana, Camile, Mariane, Jamile, Luan, Ana Cláudia, Crislane, Maira, Nilma |
 - Hover em cada linha mostra um "preview" (`.index-preview`) com um mini-fato/foto.
 - **Nunca inventar dados reais** (tempo de casa, números de vendas). Usar `[PREENCHER]` e listar em `content.js` o que falta.
 
@@ -279,7 +279,7 @@ Scroll vertical vira trilho horizontal (`.conveyor-sticky` + `.track`), com 5 sl
 - [ ] Idade (para as velas). Se for segredo, usar "16" (o dia) e não mencionar idade
 - [x] Assinatura: **Lucas Amorim · Inteligência Comercial**
 - [x] Tempo de Vitalmed: **13 anos** (desde 2013)
-- [x] Time de Inteligência Comercial: Lucas Amorim, Joelton, Adriana, Camile, Mariane, Jamile, Luan, Ana Cláudia, Crislane
+- [x] Time de Inteligência Comercial: Lucas Amorim, Joelton, Adriana, Camile, Mariane, Jamile, Luan, Ana Cláudia, Crislane, Maira, Nilma
 - [x] Mural virou **"07 · Quem assina"**: só os nomes do time (decisão do Lucas, sem mensagens individuais) + o recado do futuro
 - [x] Laudo 02: "levanta a voz, sempre com carinho" · Laudo 04 virou **A PROFISSIONAL** (Lucas conhece a Charlene só profissionalmente: excelente, muito inteligente, grato por ter sido contratado; não inventar fatos pessoais)
 - [ ] 3 desejos para as fitinhas do Bonfim
